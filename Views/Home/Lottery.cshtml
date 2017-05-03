@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Lottery";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>        
+        <div class="col-md-4">
+            <button id="findWinnerButton">Find winner</button>
+            <a asp-action="Lottery" class="btn btn-primary">Reset lottery</a>                
+            <div id="infoDiv"></div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input id="addPlayerInput">
+            <button id="addPlayerButton">Add player</button>
+            <div id="playerInputInfo"></div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <input id="addPrizeInput">
+            <button id="addPrizeButton">Add prize</button>
+            <div id="prizeInputInfo"></div>
+        </div>
+</div>
+

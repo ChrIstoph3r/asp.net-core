@@ -1,0 +1,21 @@
+@model ParkingPlace
+
+<script>
+    function initMap() {
+
+    var uluru = {lat: @Model.Latitude, lng: @Model.Longitude};
+    var map = new google.maps.Map(document.getElementById("@Model.Sted"), {
+        zoom: 16,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+</script>
+
+<div style = "height: 400px; width: 100%;" id="@Model.Sted"></div>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqJr2k_E07U_twL_ig8VTAmPqhAITIKak&callback=initMap">
+</script>

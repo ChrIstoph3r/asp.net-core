@@ -1,0 +1,22 @@
+@model IList<ParkingPlace> 
+
+</br>
+    <ul>
+        @{  
+            int columnsAmount = 1;
+            
+            @for(var i = 0; i < @Model.Count(); i+= columnsAmount)
+            {
+                <div class="row" style="margin: 20px;">
+                    @for(var j = 0; j < columnsAmount; j++)
+                    {
+                        @if(i+j < @Model.Count())
+                        {
+                            @Html.Partial("ParkingPartial", @Model[i+j]);
+                        }
+                    }
+                    
+                </div>
+            }
+        }
+    </ul>
